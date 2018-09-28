@@ -1,10 +1,12 @@
 package com.holamundo.personasmaterial;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -60,9 +62,10 @@ public class AgregarPersona extends AppCompatActivity {
         sexo = cmbsexo.getSelectedItemPosition();
         Persona p = new Persona(foto,ced,nomb,appell,sexo);
         p.guardar();
+        limpiar();
         Snackbar.make(v,getResources().getString(R.string.guardado_exitoso),Snackbar.LENGTH_SHORT)
                 .show();
-        limpiar();
+
     }
 
     public void onBackPressed(){
@@ -77,7 +80,10 @@ public class AgregarPersona extends AppCompatActivity {
         txtApellido.setText("");
         cmbsexo.setSelection(0);
         txtCedula.requestFocus();
-        
+        InputMethodManager inputMethodManager = (InputMethodManager)
+                getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                InputMethodManager.HIDE_NOT_ALWAYS);
     }
 
 
