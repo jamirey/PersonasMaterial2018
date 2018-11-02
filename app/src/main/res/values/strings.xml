@@ -7,6 +7,7 @@
     <string name="apellido">Apellido</string>
     <string name="guardar">Guardar </string>
     <string name="limpiar">Limpiar</string>
+    <string name="Seleccionar_foto">Seleccionarfoto</string>
     <string name="masculino">Masculino</string>
     <string name="femenino">Femenino</string>
     <string name="guardado_exitoso">Persona Guardada Exitosamente</string>
