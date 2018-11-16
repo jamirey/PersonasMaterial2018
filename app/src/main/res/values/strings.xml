@@ -11,6 +11,7 @@
     <string name="masculino">Masculino</string>
     <string name="femenino">Femenino</string>
     <string name="guardado_exitoso">Persona Guardada Exitosamente</string>
+    <string name="datos">Datos Personales</string>
     <string-array name="sexo">
         <item>@string/masculino</item>
         <item>@string/femenino</item>

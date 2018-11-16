@@ -68,7 +68,7 @@ public class AgregarPersona extends AppCompatActivity {
         //foto = this.fotoAleatoria();
 
         id=Datos.getId();
-        foto=id+".jpg";
+        foto = id+".jpg";
         ced = txtCedula.getText().toString();
         nomb = txtNombre.getText().toString();
         appell = txtApellido.getText().toString();
@@ -93,6 +93,7 @@ public class AgregarPersona extends AppCompatActivity {
         txtNombre.setText("");
         txtApellido.setText("");
         cmbsexo.setSelection(0);
+        foto.setImageResource(android.R.drawable.ic_menu_gallery);
         txtCedula.requestFocus();
         InputMethodManager inputMethodManager = (InputMethodManager)
                 getSystemService(Context.INPUT_METHOD_SERVICE);
